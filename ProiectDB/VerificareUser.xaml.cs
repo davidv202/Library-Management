@@ -54,7 +54,7 @@ namespace ProiectDB
 
                         if (count > 0)
                         {
-                            RezultatVerificare = true; 
+                            RezultatVerificare = true;
                             this.Close();
                         }
                         else
