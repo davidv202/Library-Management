@@ -41,7 +41,7 @@ namespace ProiectDB
             Application.Current.Shutdown();
         }
 
-        private void DeschideFereastraSecundara(string numeFereastra)
+        public void DeschideFereastraSecundara(string numeFereastra)
         {
             // Aici creezi și deschizi fereastra secundară
             switch (numeFereastra)

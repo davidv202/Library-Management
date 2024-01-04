@@ -8,27 +8,32 @@
         
         <StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Nume:" Width="80" VerticalAlignment="Center"/>
+                <TextBlock Text="Nume:" Width="100" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtNume" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Prenume:" Width="80" VerticalAlignment="Center"/>
+                <TextBlock Text="Prenume:" Width="100" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtPrenume" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Username:" Width="80" VerticalAlignment="Center"/>
+                <TextBlock Text="Username:" Width="100" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtUsername" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Data nașterii:" Width="80" VerticalAlignment="Center"/>
+                <TextBlock Text="Data nașterii:" Width="100" VerticalAlignment="Center"/>
                 <DatePicker x:Name="dpDataNasterii" Width="200"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="CNP:" Width="80" VerticalAlignment="Center"/>
+                <TextBlock Text="Numar de telefon:" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtNrTel" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="CNP:" Width="100" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtCNP" Width="200"/>
             </StackPanel>
 

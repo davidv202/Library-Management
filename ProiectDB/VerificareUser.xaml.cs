@@ -73,6 +73,13 @@ namespace ProiectDB
             }
         }
 
+        private void Inregistreaza_Click(Object sender, RoutedEventArgs e)
+        {
+            InregistrareWindow inregistrareWindow = new InregistrareWindow();
+            inregistrareWindow.Show();
+            this.Close();
+        }
+
         private void Inapoi_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

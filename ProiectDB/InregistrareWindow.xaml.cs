@@ -19,7 +19,8 @@ namespace ProiectDB
                 string.IsNullOrWhiteSpace(txtPrenume.Text) ||
                 string.IsNullOrWhiteSpace(txtUsername.Text) ||
                 !dpDataNasterii.SelectedDate.HasValue ||
-                string.IsNullOrWhiteSpace(txtCNP.Text))
+                string.IsNullOrWhiteSpace(txtCNP.Text) ||
+                string.IsNullOrWhiteSpace(txtNrTel.Text))
             {
                 MessageBox.Show("Completați toate câmpurile înainte de a înregistra utilizatorul.", "Eroare", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -33,7 +34,7 @@ namespace ProiectDB
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO users (nume, prenume, username, data_nasterii, cnp) VALUES (:nume, :prenume, :username, :dataNasterii, :cnp)";
+                    string query = "INSERT INTO users (nume, prenume, username, data_nasterii, cnp, nr_tel) VALUES (:nume, :prenume, :username, :dataNasterii, :cnp, :nrTel)";
 
                     using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
@@ -42,6 +43,7 @@ namespace ProiectDB
                         cmd.Parameters.Add("username", OracleDbType.Varchar2).Value = txtUsername.Text;
                         cmd.Parameters.Add("dataNasterii", OracleDbType.Date).Value = dpDataNasterii.SelectedDate ?? DateTime.MinValue;
                         cmd.Parameters.Add("cnp", OracleDbType.Varchar2).Value = txtCNP.Text;
+                        cmd.Parameters.Add("nrTel", OracleDbType.Varchar2).Value = txtNrTel.Text;
 
                         cmd.ExecuteNonQuery();
 
@@ -52,6 +54,7 @@ namespace ProiectDB
                         txtUsername.Text = string.Empty;
                         dpDataNasterii.SelectedDate = null;
                         txtCNP.Text = string.Empty;
+                        txtNrTel.Text = string.Empty;
                     }
                 }
                 catch (Exception ex)
