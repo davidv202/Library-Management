@@ -63,7 +63,7 @@ namespace ProiectDB
                             MessageBox.Show($"Username-ul '{usernameVerificat}' nu există în baza de date.", "Verificare eșuată", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
 
-                        txtUsername.Text= string.Empty; 
+                        txtUsername.Text = string.Empty; 
                     }
                 }
                 catch (Exception ex)
