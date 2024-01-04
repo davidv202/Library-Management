@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProiectDB.ImprumutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProiectDB"
+        mc:Ignorable="d"
+        Title="Împrumut Cărți" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListView x:Name="lvCartiDisponibile" Margin="10,10,10,55">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Titlu" DisplayMemberBinding="{Binding Titlu}" Width="200"/>
+                    <GridViewColumn Header="Autor" DisplayMemberBinding="{Binding Autor}" Width="150"/>
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Împrumută" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,10,10" Padding="10" Click="Imprumuta_Click"/>
+        <Button Content="Înapoi" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,130,10" Padding="10" Click="Inapoi_Click"/>
+    </Grid>
+</Window>

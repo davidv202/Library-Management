@@ -1,0 +1,24 @@
+﻿<Window x:Class="ProiectDB.VerificareUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProiectDB"
+        mc:Ignorable="d"
+        Title="VerificareUser" Height="372" Width="626"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFB0E0E6">
+    <Viewbox Margin="0,0,0,0">
+        <Grid Margin="10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center">
+                    <TextBlock Text="Username:" Width="80" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtUsername" Width="200"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Adaugă butonul pentru verificare -->
+            <Button Content="Verifică" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,40,0,0" Padding="5" Click="Verifica_Click"/>
+        </Grid>
+    </Viewbox>
+</Window>
