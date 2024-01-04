@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProiectDB"
         mc:Ignorable="d"
-        Title="VerificareUser" Height="372" Width="626"
+        Title="VerificareUser" Height="350" Width="525"
         WindowStartupLocation="CenterScreen"
         Background="#FFB0E0E6">
     <Viewbox Margin="0,0,0,0">
@@ -17,8 +17,8 @@
                 </StackPanel>
             </StackPanel>
 
-            <!-- Adaugă butonul pentru verificare -->
-            <Button Content="Verifică" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,40,0,0" Padding="5" Click="Verifica_Click"/>
+            <Button Content="Verifica" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,40,0,0" Background="#FFE0FFFF" Padding="5" Click="Verifica_Click"/>
+            <Button Content="Inapoi" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF6347" Margin="0,40,60,0" Padding="5" Click="Inapoi_Click"/>
         </Grid>
     </Viewbox>
 </Window>

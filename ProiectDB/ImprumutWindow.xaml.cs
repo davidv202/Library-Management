@@ -47,6 +47,11 @@ namespace ProiectDB
             }
         }
 
+        private void Imprumuta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Inapoi_Click(object sender, RoutedEventArgs e)
         {
             // Închide fereastra curentă și revino la fereastra anterioară

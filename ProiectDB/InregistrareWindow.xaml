@@ -33,8 +33,8 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <Button Content="Înregistrează-te" Background="#FFE0FFFF" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" Click="InregistrareUtilizator_Click"/>
-                <Button Content="Inapoi" Background="#FFFF6347" Margin="200,0,0,0" Padding="10" Click="InregistrareIesire_Click"/>
+                <Button Content="Iesire" Background="#FFFF6347" Padding="10" Click="InregistrareIesire_Click"/>
+                <Button Content="Înregistrează-te" Background="#FFE0FFFF" Margin="200,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" Click="InregistrareUtilizator_Click"/>
             </StackPanel>
             
 

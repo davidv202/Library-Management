@@ -20,6 +20,7 @@ namespace ProiectDB
     /// </summary>
     public partial class VerificareUser : Window
     {
+        public bool RezultatVerificare { get; private set; }
         public VerificareUser()
         {
             InitializeComponent();
@@ -53,12 +54,16 @@ namespace ProiectDB
 
                         if (count > 0)
                         {
-                            MessageBox.Show($"Username-ul '{usernameVerificat}' există în baza de date.", "Verificare cu succes", MessageBoxButton.OK, MessageBoxImage.Information);
+                            RezultatVerificare = true; 
+                            this.Close();
                         }
                         else
                         {
+                            RezultatVerificare = false;
                             MessageBox.Show($"Username-ul '{usernameVerificat}' nu există în baza de date.", "Verificare eșuată", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
+
+                        txtUsername.Text= string.Empty;
                     }
                 }
                 catch (Exception ex)
@@ -66,6 +71,11 @@ namespace ProiectDB
                     MessageBox.Show("Eroare la verificare: " + ex.Message);
                 }
             }
+        }
+
+        private void Inapoi_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
     }
