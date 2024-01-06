@@ -5,9 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProiectDB"
         mc:Ignorable="d"
-        Title="ReturnareWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        Title="Împrumut Cărți" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFB0E0E6">
     <Grid>
-        
+        <!-- Adaugă TextBox pentru introducerea username-ului -->
+        <TextBlock Text="Introduceti username-ul pentru a vedea cartile imprumutate:" VerticalAlignment="Bottom" Margin="10,0,462,389"/>
+        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,357" Width="200"/>
+
+        <ListView x:Name="lvCartiDisponibile" Margin="10,94,10,10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Titlu" DisplayMemberBinding="{Binding Titlu}" Width="400"/>
+                    <GridViewColumn Header="Autor" DisplayMemberBinding="{Binding Autor}" Width="400"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Returneaza" HorizontalAlignment="Right" Background="#FFE0FFFF" VerticalAlignment="Bottom" Margin="0,0,10,347" Padding="10" Click="Returneaza_Click"/>
+
+        <Button Content="Verifica" HorizontalAlignment="Right" Background="#FFE0FFFF" VerticalAlignment="Bottom" Margin="0,0,512,352" Padding="5" Click="Verifica_Click"/>
+
+        <Button Content="Înapoi" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF6347" Margin="0,0,124,347" Padding="10" Click="Inapoi_Click"/>
     </Grid>
 </Window>

@@ -47,6 +47,16 @@ namespace ProiectDB
 
                         cmd.ExecuteNonQuery();
 
+                        string insertQuery = "INSERT INTO legitimatii VALUES (legitimatie_seq.NEXTVAL, users_seq.CURRVAL, :nume, :prenume)";
+
+                        using (OracleCommand insertCmd = new OracleCommand(insertQuery, connection))
+                        {
+                            insertCmd.Parameters.Add("nume", OracleDbType.Varchar2).Value = txtNume.Text;
+                            insertCmd.Parameters.Add("prenume", OracleDbType.Varchar2).Value = txtPrenume.Text;
+
+                            insertCmd.ExecuteNonQuery();
+                        }
+
                         MessageBox.Show("Utilizator înregistrat cu succes!");
 
                         txtNume.Text = string.Empty;

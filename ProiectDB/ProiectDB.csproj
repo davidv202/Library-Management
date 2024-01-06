@@ -92,6 +92,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Carte.cs" />
+    <Compile Include="CarteImprumutata.cs" />
     <Compile Include="ReturnareWindow.xaml.cs">
       <DependentUpon>ReturnareWindow.xaml</DependentUpon>
     </Compile>
