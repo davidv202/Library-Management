@@ -14,8 +14,8 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Titlu" DisplayMemberBinding="{Binding Titlu}" Width="200"/>
-                    <GridViewColumn Header="Autor" DisplayMemberBinding="{Binding Autor}" Width="150"/>
-                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="150"/>
+                    <GridViewColumn Header="Autor" DisplayMemberBinding="{Binding Autor}" Width="200"/>
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="200"/>
                 </GridView>
             </ListView.View>
         </ListView>

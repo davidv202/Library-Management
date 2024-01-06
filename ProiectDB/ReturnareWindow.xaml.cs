@@ -139,12 +139,14 @@ namespace ProiectDB
 
                                     updateCmd.ExecuteNonQuery();
 
-                                    string imprumutInsertQuery = "DELETE FROM imprumuturi WHERE user_id=:user_id";
+                                    string imprumutInsertQuery = "DELETE FROM imprumuturi WHERE user_id=:user_id AND titlu=:titlu AND autor=:autor";
                                     foreach (CarteImprumutata carteSelectata in lvCartiDisponibile.SelectedItems)
                                     {
                                         using (OracleCommand imprumutInsertCmd = new OracleCommand(imprumutInsertQuery, connection))
                                         {
                                             imprumutInsertCmd.Parameters.Add(new OracleParameter("user_id", userId));
+                                            imprumutInsertCmd.Parameters.Add(new OracleParameter("titlu", carteSelectata.Titlu));
+                                            imprumutInsertCmd.Parameters.Add(new OracleParameter("user_id", carteSelectata.Autor));
 
                                             imprumutInsertCmd.ExecuteNonQuery();
                                         }
