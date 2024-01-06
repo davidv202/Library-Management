@@ -9,7 +9,11 @@
         WindowStartupLocation="CenterScreen"
         Background="#FFB0E0E6">
     <Grid>
-        <ListView x:Name="lvCartiDisponibile" Margin="10,10,10,55">
+        <!-- Adaugă TextBox pentru introducerea username-ului -->
+        <TextBlock Text="Introduceti username-ul pentru verificare:" VerticalAlignment="Bottom" Margin="432,0,94,53"/>
+        <TextBox x:Name="tbUsername" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="455,0,0,20" Width="200"/>
+
+        <ListView x:Name="lvCartiDisponibile" Margin="10,19,10,85">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Titlu" DisplayMemberBinding="{Binding Titlu}" Width="200"/>
@@ -19,6 +23,7 @@
             </ListView.View>
         </ListView>
         <Button Content="Împrumută" HorizontalAlignment="Right" Background="#FFE0FFFF" VerticalAlignment="Bottom" Margin="0,10,10,10" Padding="10" Click="Imprumuta_Click"/>
-        <Button Content="Înapoi" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF6347" Margin="0,10,130,10" Padding="10" Click="Inapoi_Click"/>
+
+        <Button Content="Înapoi" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFFF6347" Margin="0,0,409,10" Padding="10" Click="Inapoi_Click"/>
     </Grid>
 </Window>

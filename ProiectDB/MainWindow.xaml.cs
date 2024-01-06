@@ -17,18 +17,16 @@ namespace ProiectDB
 
         private void Imprumut_Click(object sender, RoutedEventArgs e)
         {
-            if (VerificaUtilizator())
-            {
-                DeschideFereastraSecundara("Imprumut");
-            }
+           
+            DeschideFereastraSecundara("Imprumut");
+            
         }
 
         private void Returnare_Click(object sender, RoutedEventArgs e)
         {
-            if (VerificaUtilizator())
-            {
-                DeschideFereastraSecundara("Returnare");
-            }
+            
+            DeschideFereastraSecundara("Returnare");
+            
         }
 
         private void CartiDisponibile_Click(object sender, RoutedEventArgs e)
@@ -68,22 +66,6 @@ namespace ProiectDB
 
                 default:
                     break;
-            }
-        }
-
-        private bool VerificaUtilizator()
-        {
-            VerificareUser verificareUser = new VerificareUser();
-            verificareUser.ShowDialog(); 
-
-            // Verifică rezultatul
-            if (verificareUser.RezultatVerificare)
-            {
-                return true; 
-            }
-            else
-            {
-                return false; 
             }
         }
     }

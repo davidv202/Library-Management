@@ -34,7 +34,7 @@ namespace ProiectDB
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO users (nume, prenume, username, data_nasterii, cnp, nr_tel) VALUES (:nume, :prenume, :username, :dataNasterii, :cnp, :nrTel)";
+                    string query = "INSERT INTO users (id, nume, prenume, username, data_nasterii, cnp, nr_tel) VALUES (users_seq.NEXTVAL, :nume, :prenume, :username, :dataNasterii, :cnp, :nrTel)";
 
                     using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
