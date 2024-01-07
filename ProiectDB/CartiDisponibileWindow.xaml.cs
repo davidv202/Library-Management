@@ -7,7 +7,7 @@ using Oracle.ManagedDataAccess.Client;
 namespace ProiectDB
 {
     public partial class CartiDisponibileWindow : Window
-    {
+    {  
         public ObservableCollection<Carte> CartiDisponibile { get; set; }
 
         public CartiDisponibileWindow()
